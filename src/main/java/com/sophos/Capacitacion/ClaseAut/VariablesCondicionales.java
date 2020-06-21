@@ -2,10 +2,12 @@ package com.sophos.Capacitacion.ClaseAut;
 
 public class VariablesCondicionales {
 
+	
+
+	
 	void Variables() {
 		
-		//El programa del calculo de edad se encuentra en la Clase App
-		
+				
 		byte variablebyte1 = -128 ;
 		byte variablebyte2 = 127 ;
 		
@@ -32,10 +34,12 @@ public class VariablesCondicionales {
 		
 		String variablestring1 = "Leonardo" ;
 		String variablestring2 = "Rojas" ;
+	
+	
+
 		
-		//El programa del calculo de edad se encuentra en la Clase App
 		
 		
 	}
-
+	
 }

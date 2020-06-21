@@ -1,5 +1,7 @@
 package com.sophos.Capacitacion.ClaseAut;
 
+import com.sophos.Capacitacion.Clase4.Carro;
+
 /**
  * Hello world!
  *
@@ -9,15 +11,19 @@ public class App
    
 	public static void main( String[] args )
     {
-		// System.out.println( "Hello World!" );
 		
-		int Edad = 30 ; 
+		Carro nuevoCarro = new Carro();
+		nuevoCarro.setCantidadLlantas(4);
+		nuevoCarro.setColor("Negro");
+		nuevoCarro.setTipoEnergia("Gasolina");
 		
-    	if (Edad<18) {
-			System.out.println("Usted es menor de edad");
-		}else {
-			System.out.println("Usted es mayor de edad");
-		}
-      
+		System.out.println("Cantidad de llantas: " + nuevoCarro.getCantidadLlantas() + "," + " Color: " + nuevoCarro.getColor() + "," + " Fuente de energia: " + nuevoCarro.getTipoEnergia());
+		      
     }
+	
+	public void clase3 () {
+		//System.out.println( "Hello World!" );
+		Edad calculoEdad = new Edad ();
+		calculoEdad.setEdad(5);
+	}
 }
