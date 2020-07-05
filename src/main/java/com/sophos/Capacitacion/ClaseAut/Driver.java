@@ -1,7 +1,11 @@
 package com.sophos.Capacitacion.ClaseAut;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 public class Driver {
 	WebDriver driver;
@@ -20,9 +24,14 @@ public class Driver {
 		System.setProperty("webdriver.gecko.driver", rutaDriver);
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
+		WebElement elemento = driver.findElement(By.name("q"));
+		System.out.println("Se ejecuta acá");
+		driver.close();
+		System.out.println("Por ultimo se ejecuta acá");
 		driver.close();
 		
 	}
+	
 	
 	
 
