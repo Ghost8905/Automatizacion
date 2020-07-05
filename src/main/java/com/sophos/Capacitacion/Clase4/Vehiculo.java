@@ -1,4 +1,4 @@
-package com.sophos.Capacitacion.Clase6;
+package com.sophos.Capacitacion.Clase4;
 
 public class Vehiculo {
 	

@@ -1,4 +1,4 @@
-package com.sophos.Capacitacion.Clase4;
+package com.sophos.Capacitacion.Clase6;
 
 import java.util.Scanner;
 

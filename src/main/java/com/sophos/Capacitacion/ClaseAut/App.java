@@ -1,7 +1,7 @@
 package com.sophos.Capacitacion.ClaseAut;
 
 import com.sophos.Capacitacion.Clase4.Carro;
-import com.sophos.Capacitacion.Clase4.EntradasSalidas;
+import com.sophos.Capacitacion.Clase6.EntradasSalidas;
 
 /**
  * Hello world!

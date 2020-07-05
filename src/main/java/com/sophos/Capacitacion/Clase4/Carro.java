@@ -1,7 +1,5 @@
 package com.sophos.Capacitacion.Clase4;
 
-import com.sophos.Capacitacion.Clase6.Vehiculo;
-
 public class Carro extends Vehiculo {
 
 	private String color ;
