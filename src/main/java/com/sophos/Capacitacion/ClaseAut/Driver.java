@@ -8,30 +8,53 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 public class Driver {
-	WebDriver driver;
 	
-	public void navegadorGoogle() {
-		String rutaDriver = ".\\src\\main\\java\\resources\\Drivers\\chromedriver_win32\\chromedriver.exe";
-		System.setProperty("webdriver.chrome.driver", rutaDriver);
-		driver = new ChromeDriver();
-		driver.get("https://www.google.com/");
-		driver.close();
+	private WebDriver driver;
+	
+		public Driver() {
 		
 	}
-	
-	public void navegadorFirefox() {
-		String rutaDriver = ".\\src\\main\\java\\resources\\Drivers\\geckodriver-v0.26.0-win64";
-		System.setProperty("webdriver.gecko.driver", rutaDriver);
-		driver = new ChromeDriver();
-		driver.get("https://www.google.com/");
-		WebElement elemento = driver.findElement(By.name("q"));
-		System.out.println("Se ejecuta acá");
-		driver.close();
-		System.out.println("Por ultimo se ejecuta acá");
-		driver.close();
-		
+
+		public WebDriver getDriver() {
+		return driver;
 	}
-	
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
+	}
+
+		public void lanzarnavegador(String navegador) {
+			navegador = navegador.toLowerCase();
+			
+			switch (navegador) {
+			case "google":
+			System.setProperty("webdriver.chrome.driver", ".\\src\\main\\java\\resources\\Drivers\\chromedriver_win32\\chromedriver.exe");
+			driver = new ChromeDriver();
+			break;
+			
+			case "firefox":
+			System.setProperty("webdriver.gecko.driver", ".\\src\\main\\java\\resources\\Drivers\\geckodriver-v0.26.0-win64");
+			driver = new FirefoxDriver();
+			break;
+		
+			default:
+				System.out.println("El navegador seleccionado no esta permitido");
+				break;
+			}
+			}
+			
+		public void navegarA (String url) {
+			driver.get(url);
+			
+		}
+		
+		public void cierreNavegador() {
+			driver.close();
+		}
+			
+			
+		
+		
 	
 	
 
