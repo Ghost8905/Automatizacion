@@ -18,10 +18,11 @@ public class App
 		Driver objDriver = new Driver();
 		objDriver.lanzarnavegador("google");
 		objDriver.navegarA("https://www.google.com/");
-		WebElement cajaTexto = objDriver.getDriver().findElement(By.xpath("" + "//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"));
+		WebElement cajaTexto = objDriver.getDriver().findElement(By.name("q"));
 		cajaTexto.sendKeys("Sophos Chronus");
-		WebElement buscar = objDriver.getDriver().findElement(By.xpath("" + "//*[@id=\"tsf\"]/div[2]/div[1]/div[3]/center/input[1]"));
-		buscar.click();
+		cajaTexto.submit();
+//		WebElement buscar = objDriver.getDriver().findElement(By.xpath("" + "//*[@id=\"tsf\"]/div[2]/div[1]/div[2]/div[2]/div[2]/center/input[1]"));
+//		buscar.click();
 		WebElement sophosChronus = objDriver.getDriver().findElement(By.xpath("" + "//*[@id=\"rso\"]/div[1]/div/div[1]/a/h3"));
 		sophosChronus.click();
 		WebElement usuario = objDriver.getDriver().findElement(By.xpath("" + "//*[@id=\"ctl00_maincontent_Login1_UserName\"]"));
